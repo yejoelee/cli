@@ -1,2 +1,2 @@
-# cli
-Lite CLI for MCU
+# CLI
+Lite Command Like Interface for MCU Platform

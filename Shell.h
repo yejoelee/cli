@@ -11,6 +11,7 @@
  ******************************************************************************/
 
 #include "ShellCustomerPort.h"
+#include "ShellCMDList.h"
 
 #ifndef __SHELL_H__
 #define __SHELL_H__

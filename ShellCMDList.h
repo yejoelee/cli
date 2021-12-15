@@ -14,7 +14,9 @@
 #include "Shell.h"
 #include "ShellPort.h"
 
+#ifndef NULL
 #define NULL        0
+#endif
 
 typedef struct _shell_command_entry {
     const char *shell_command_string; ///< command name
@@ -31,6 +33,9 @@ typedef struct _shell_command_entry {
 
 /// Add command `NAME` to #cmdList
 #define CMD_ADD(NAME)     { #NAME,            cmd_##NAME##_main,                   cmd_##NAME##_usage_help    },
+
+#define CMD_MAIN_DEFINE(NAME)       COMMAND_STATE cmd_##NAME##_main(int argc, char **argv)
+#define CMD_HELP_MSG_DEFINE(NAME)   void cmd_##NAME##_usage_help(void)
 
 /// #cmdList is extern defined accroding platform
 extern RAM_TYPE shell_command_entry cmdList[];

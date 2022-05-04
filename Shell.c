@@ -118,7 +118,10 @@ static int shell_parse(char *buf, char **argv, unsigned short maxargs)
             // Handle special char: Space is token separator
             case ' ':
                 if(toggle == 0) {
-                    while(buf[i] == ' ' && i < length) {buf[i] = '\0'; i++;};
+                    while(buf[i] == ' ' && i < length) {
+                        buf[i] = '\0';
+                        i++;
+                    };
                     argc++;
                     argv[argc] = &buf[i];
                 }
